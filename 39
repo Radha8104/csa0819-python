@@ -1,0 +1,31 @@
+def merge_sorted_lists(list1, list2):
+    merged_list = []
+    i = j = 0
+
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            merged_list.append(list1[i])
+            i += 1
+        else:
+            merged_list.append(list2[j])
+            j += 1
+
+    # Append the remaining elements from both lists (if any)
+    merged_list.extend(list1[i:])
+    merged_list.extend(list2[j:])
+
+    return merged_list
+
+# Example usage:
+try:
+    input_list1 = input("Enter the first sorted list of numbers separated by spaces: ")
+    input_list2 = input("Enter the second sorted list of numbers separated by spaces: ")
+
+    list1 = list(map(int, input_list1.split()))
+    list2 = list(map(int, input_list2.split()))
+
+    merged_result = merge_sorted_lists(list1, list2)
+
+    print("Merged Sorted List:", merged_result)
+except ValueError:
+    print("Invalid input. Please enter valid sorted lists of numbers.")
