@@ -1,0 +1,31 @@
+def count_vowels_consonants(statement):
+    vowels = 0
+    consonants = 0
+    vowels_list = "aeiouAEIOU"
+
+    for char in statement:
+        if char.isalpha():
+            if char in vowels_list:
+                vowels += 1
+            else:
+                consonants += 1
+
+    return vowels, consonants
+
+# Sample Input
+statement = "Saveetha School of Engineering"
+
+# Counting vowels and consonants
+num_vowels, num_consonants = count_vowels_consonants(statement)
+
+# Printing the counts
+print("Number of vowels =", num_vowels)
+print("Number of consonants =", num_consonants)
+
+# Determining which count is maximum
+if num_vowels > num_consonants:
+    print("Vowels count is maximum.")
+elif num_consonants > num_vowels:
+    print("Consonants count is maximum.")
+else:
+    print("Both vowels and consonants counts are equal.")
