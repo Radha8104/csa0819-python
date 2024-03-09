@@ -1,0 +1,24 @@
+def find_nth_largest(lst, n):
+    unique_sorted_numbers = sorted(set(lst), reverse=True)
+
+    if 1 <= n <= len(unique_sorted_numbers):
+        nth_largest = unique_sorted_numbers[n - 1]
+        return nth_largest
+    else:
+        return None
+
+# Example usage:
+try:
+    user_input = input("Enter a list of numbers separated by spaces: ")
+    user_list = list(map(int, user_input.split()))
+
+    nth_value = int(input("Enter the value of N to find the Nth largest number: "))
+
+    result = find_nth_largest(user_list, nth_value)
+
+    if result is not None:
+        print(f"The {nth_value}th largest number is: {result}")
+    else:
+        print(f"Invalid input for N. Please enter a valid value between 1 and {len(user_list)}.")
+except ValueError:
+    print("Invalid input. Please enter a valid list of numbers.")
