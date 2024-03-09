@@ -1,0 +1,39 @@
+def add(x, n):
+    return x + n
+
+def sub(x, n):
+    return x - n
+
+def mul(x, n):
+    return x * n
+
+def div(x, n):
+    if n != 0:
+        return x / n
+    else:
+        return "Division by zero is not allowed."
+
+def power(x, n):
+    return x ** n
+
+x = float(input("Enter the value of X: "))
+n = float(input("Enter the value of N: "))
+choice = int(input("Enter your choice (1:Add, 2:Sub, 3:Mul, 4:Div, 5:Pow): "))
+
+if choice == 1:
+    result = add(x, n)
+    print(f"Add({x}, {n}) = {result}")
+elif choice == 2:
+    result = sub(x, n)
+    print(f"Sub({x}, {n}) = {result}")
+elif choice == 3:
+    result = mul(x, n)
+    print(f"Mul({x}, {n}) = {result}")
+elif choice == 4:
+    result = div(x, n)
+    print(f"Div({x}, {n}) = {result}")
+elif choice == 5:
+    result = power(x, n)
+    print(f"Pow({x}, {n}) = {result}")
+else:
+    print("Invalid choice.")
