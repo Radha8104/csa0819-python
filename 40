@@ -1,0 +1,33 @@
+def find_mth_max_and_nth_min(arr, m, n):
+    sorted_arr = sorted(set(arr), reverse=True)
+
+    if 1 <= m <= len(sorted_arr) and 1 <= n <= len(sorted_arr):
+        mth_max = sorted_arr[m - 1]
+        nth_min = sorted_arr[n - 1]
+        return mth_max, nth_min
+    else:
+        return None, None
+
+# Example usage:
+try:
+    user_input = input("Enter an array of numbers separated by spaces: ")
+    arr = list(map(int, user_input.split()))
+
+    m_value = int(input("Enter the value of M: "))
+    n_value = int(input("Enter the value of N: "))
+
+    mth_max, nth_min = find_mth_max_and_nth_min(arr, m_value, n_value)
+
+    if mth_max is not None and nth_min is not None:
+        sum_result = mth_max + nth_min
+        difference_result = mth_max - nth_min
+
+        print(f"\nMth Maximum: {mth_max}")
+        print(f"Nth Minimum: {nth_min}")
+        print(f"Sum: {sum_result}")
+        print(f"Difference: {difference_result}")
+    else:
+        print(f"\nInvalid input for M or N. Please enter valid values between 1 and {len(arr)}.")
+
+except ValueError:
+    print("Invalid input. Please enter a valid array of numbers.")
