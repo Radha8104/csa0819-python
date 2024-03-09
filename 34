@@ -1,0 +1,16 @@
+def print_special_characters(line):
+    special_characters = "!@#$%^&*()-_+=[]{}|;:'\",.<>?/"
+
+    # Separate and print special characters
+    print("Special Characters:")
+    for char in line:
+        if char in special_characters:
+            print(char, end=" ")
+
+    # Count and print the number of special characters
+    num_special_characters = sum(1 for char in line if char in special_characters)
+    print(f"\nNumber of Special Characters: {num_special_characters}")
+
+# Example usage:
+user_line = input("Enter a line of text: ")
+print_special_characters(user_line)
