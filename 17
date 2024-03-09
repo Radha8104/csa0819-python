@@ -1,0 +1,11 @@
+M = 50
+N = 100
+K = 7
+
+current_number = M
+
+while current_number <= N:
+    print(current_number, end=", ")
+    current_number += K
+
+print()
