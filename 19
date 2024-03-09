@@ -1,0 +1,12 @@
+names = input("Enter names separated by commas: ").split(", ")
+order = input("Enter order (A for Ascending, D for Descending): ").upper()
+
+if order == "A":
+    sorted_names = sorted(names)
+elif order == "D":
+    sorted_names = sorted(names, reverse=True)
+else:
+    print("Invalid order. Please enter 'A' for Ascending or 'D' for Descending.")
+    exit()
+
+print("Sorted names:", " ".join(sorted_names))
