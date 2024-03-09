@@ -1,0 +1,13 @@
+def main():
+    denominations = [2000, 500, 200, 100]
+    total_balance = 0
+
+    for i in range(len(denominations)):
+        denomination = int(input(f"Enter the {i+1} Denomination: "))
+        notes = int(input(f"Enter the {i+1} Denomination number of notes: "))
+        total_balance += denomination * notes
+
+    print(f"Total Available Balance in ATM: {total_balance}")
+
+if _name_ == "_main_":
+    main()
