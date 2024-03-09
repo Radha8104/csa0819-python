@@ -1,0 +1,24 @@
+def remove_duplicates(arr):
+    if len(arr) == 0 or len(arr) == 1:
+        return arr
+
+    j = 0
+    for i in range(0, len(arr) - 1):
+        if arr[i] != arr[i + 1]:
+            arr[j] = arr[i]
+            j += 1
+
+    arr[j] = arr[-1]
+    j += 1
+
+    return arr[:j]
+
+# Sample Input
+array = [15, 14, 25, 14, 32, 14, 31]
+array.sort()
+
+# Removing duplicates
+result = remove_duplicates(array)
+
+# Printing the sorted array without duplicates
+print("Sorted Array =", result)
