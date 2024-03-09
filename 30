@@ -1,0 +1,18 @@
+def matrix_sum(matrix):
+    row_sums = [sum(row) for row in matrix]
+    column_sums = [sum(col) for col in zip(*matrix)]
+    diagonal_sum = sum(matrix[i][i] for i in range(len(matrix)))
+    reverse_diagonal_sum = sum(matrix[i][len(matrix)-1-i] for i in range(len(matrix)))
+    
+    print("Row sums:", row_sums)
+    print("Column sums:", column_sums)
+    print("Diagonal sum:", diagonal_sum)
+    print("Reverse diagonal sum:", reverse_diagonal_sum)
+
+a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+matrix_sum(a)
