@@ -1,0 +1,24 @@
+from statistics import mean, median, mode
+
+def calculate_mean_median_mode(numbers):
+    try:
+        mean_value = mean(numbers)
+        median_value = median(numbers)
+        mode_value = mode(numbers)
+
+        return mean_value, median_value, mode_value
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+# Example usage:
+user_input = input("Enter a list of numbers separated by spaces: ")
+user_numbers = list(map(float, user_input.split()))
+
+result = calculate_mean_median_mode(user_numbers)
+
+if result:
+    mean_value, median_value, mode_value = result
+    print(f"Mean: {mean_value}")
+    print(f"Median: {median_value}")
+    print(f"Mode: {mode_value}")
