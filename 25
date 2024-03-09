@@ -1,0 +1,10 @@
+def reverse_words(s):
+    words = s.split()  # Split the string into a list of words
+    reversed_words = ' '.join(reversed(words))  # Reverse the order of the words and join them back into a string
+    return reversed_words
+
+# Example usage:
+user_input = input("Enter a string: ")
+reversed_string = reverse_words(user_input)
+
+print("Reversed Words:", reversed_string)
