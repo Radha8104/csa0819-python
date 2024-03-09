@@ -1,0 +1,23 @@
+positive_numbers = []
+negative_numbers = []
+
+while True:
+    num = int(input("Enter the number (Enter -1 to exit): "))
+    if num == -1:
+        break
+    elif num > 0:
+        positive_numbers.append(num)
+    else:
+        negative_numbers.append(num)
+
+if positive_numbers:
+    avg_positive = sum(positive_numbers) / len(positive_numbers)
+    print(f"The average of positive numbers is: {avg_positive}")
+else:
+    print("No positive numbers were entered.")
+
+if negative_numbers:
+    avg_negative = sum(negative_numbers) / len(negative_numbers)
+    print(f"The average of negative numbers is: {avg_negative}")
+else:
+    print("No negative numbers were entered.")
