@@ -1,0 +1,14 @@
+def reverse_word(word):
+	return word[::-1]
+
+
+def main():
+	original_word = "Hello"
+	reversed_word = reverse_word(original_word)
+
+	print("Original Word:", original_word)
+	print("Reversed Word:", reversed_word)
+
+
+if _name_ == "_main_":
+	main()
