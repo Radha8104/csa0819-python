@@ -1,0 +1,11 @@
+def find_next_anniversary(year):
+    if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+        print(f"{year} is a leap year.")
+        print(f"The next anniversary is in {year + 1}.")
+    else:
+        print(f"{year} is not a leap year.")
+        print(f"The previous anniversary is in {year - 1}.")
+
+# Example usage
+year = 2024
+find_next_anniversary(year)
